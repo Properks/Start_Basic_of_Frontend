@@ -1,0 +1,31 @@
+/*
+Priority of css
+1. !important 
+    -> font-style: italic !important;
+2. inline 
+    -> <p style"...">
+3. id 
+    -> #{id} {...}
+4. class 
+    -> .{class} {...} 
+5. type style 
+    -> p {...}
+*/
+* {
+    margin: 10px;
+}
+
+h2 {
+    padding : 10px;
+    background-color: beige;
+    color: darkgreen;
+}
+
+.list { /* class */
+    font-style: italic;
+}
+
+#article-text { /* id */
+    font-size: 10;
+    font-weight: bold;
+}
