@@ -11,14 +11,25 @@ Priority of css
 5. type style 
     -> p {...}
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 * {
     margin: 10px;
+    text-transform: capitalize;
 }
 
 h2 {
     padding : 10px;
     background-color: beige;
     color: darkgreen;
+    font-family: 'Dancing Script';
+    letter-spacing: 0.5rem;
+}
+
+dd {
+    margin-left:2rem;
+    text-shadow: 2px 3px 3px orange; /* offset-x offset-y blur-radius color */
 }
 
 .list { /* class */
@@ -26,6 +37,12 @@ h2 {
 }
 
 #article-text { /* id */
-    font-size: 10;
+    font-size: 10px;
     font-weight: bold;
+    text-align: justify;
+    line-height: 0.75rem; /* 0.75rem -> 12px 
+        => default font size is 16px, 16px x 0.75 = 12px
+        Declare font-size: 10px; here but, 0.75rem is 12px
+        Can use 150%*/
+    color:hsla(135, 51%, 51%, 0.5) /* + rgb, rgba*/
 }
