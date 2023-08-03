@@ -9,18 +9,23 @@
 <body>
     <div class="list">
         <h2>reserved order list</h2>
-        <ol start="10" reversed>
-            <li>reserved order</li>
-            <li>reserved order</li>
-            <li>reserved order</li>
-            <li>reserved order</li>
-            <li>reserved order</li>
+        <ol class="ordered-list" start="5" reversed>
             <li>reserved order</li>
             <li>reserved order</li>
             <li>reserved order</li>
             <li>reserved order</li>
             <li>reserved order</li>
         </ol>
+        <ul class="unordered-list">
+            <li>unordered list</li>
+            <li>unordered list</li>
+            <li>unordered list</li>
+        </ul>
+        <ul class="image-list">
+            <li>image list (download, indent)</li>
+            <li>image list (download, indent)</li>
+            <li>image list (download, indent)</li>
+        </ul>
     </div>
 
     <div class="description">
@@ -37,13 +42,12 @@
         </dl>
     </div>
 
-    <div class="table">
+    <div class="table-container">
         <h2>table</h2>
-        <table style="text-align: center;"> 
+        <table class="table"> 
             <caption>for sale</caption>
             <colgroup>
                 <col style="background-color:beige;">
-                <col style="width:70px;">
             </colgroup>
             <thead>
                 <tr>
@@ -102,5 +106,22 @@
             <option value="own" selected>for yourself</option>
         </select>
     </div>
+
+    <!-- Practice -->
+    <h2 class="practice">practice</h2>
+    <div class="practice-container">
+
+        <div class="practice-list">
+            <h4>unordered list</h4>
+            <ul class="practice-unordered-list">
+                <li class="practice-unordered-list-item">company introduction</li>
+                <li class="practice-unordered-list-item">books</li>
+                <li class="practice-unordered-list-item">reference room</li>
+                <li class="practice-unordered-list-item">video lecture</li>
+            </ul>
+        </div>
+
+    </div>
+
 </body>
 </html>

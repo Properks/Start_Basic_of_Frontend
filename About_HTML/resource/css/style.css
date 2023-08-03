@@ -12,8 +12,7 @@ Priority of css
     -> p {...}
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Handjet:wght@300&display=swap');
 * {
     margin: 10px;
     text-transform: capitalize;
@@ -23,8 +22,8 @@ h2 {
     padding : 10px;
     background-color: beige;
     color: darkgreen;
-    font-family: 'Dancing Script';
-    letter-spacing: 0.5rem;
+    font-family: 'borel', cursive;
+    letter-spacing: 0.2rem;
 }
 
 dd {
@@ -32,8 +31,60 @@ dd {
     text-shadow: 2px 3px 3px orange; /* offset-x offset-y blur-radius color */
 }
 
+th, tr, td {
+    width: 33%;
+    border: 1px solid darkgreen;
+    text-align: center;
+}
+
+h4 { /* Practice Subtitle*/
+    background-color: dimgray;
+    color:cyan;
+    padding:1rem;
+    font-size: 20px;
+    font-style: italic;
+    font-family: 'HandJet', cursive;
+}
+
+
 .list { /* class */
     font-style: italic;
+}
+
+.ordered-list {
+    list-style-type: lower-alpha; /* like 'type="a"' */
+}
+
+.unordered-list {
+    list-style-type: circle;
+}
+
+.image-list {
+    list-style-image: url('../img/download.png') !important;
+    list-style-position: inside;
+}
+
+.table {
+    width:70%;
+    border:1px solid darkgreen;
+    border-collapse: collapse; /* border-spacing: 0; */
+}
+
+.practice {
+    background-color: skyblue;
+    color: greenyellow;
+}
+
+.practice-unordered-list {
+    list-style-type: none;
+    
+}
+.practice-unordered-list-item {
+    border: 1px solid #000;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    
 }
 
 #article-text { /* id */
