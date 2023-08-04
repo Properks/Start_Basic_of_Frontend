@@ -14,7 +14,7 @@ Priority of css
 
 @import url('https://fonts.googleapis.com/css2?family=Borel&family=Handjet:wght@300&display=swap');
 * {
-    margin: 10px;
+    margin: 5px;
     text-transform: capitalize;
 }
 
@@ -35,6 +35,7 @@ th, tr, td {
     width: 33%;
     border: 1px solid darkgreen;
     text-align: center;
+    border-width: 2px;
 }
 
 h4 { /* Practice Subtitle*/
@@ -46,6 +47,11 @@ h4 { /* Practice Subtitle*/
     font-family: 'HandJet', cursive;
 }
 
+.container .practice-container {
+    width:90%;
+    box-sizing: border-box; /* To make width(95%) as contain padding, margin, border */
+    margin: auto; /* Center aligned */
+}
 
 .list { /* class */
     font-style: italic;
@@ -67,7 +73,18 @@ h4 { /* Practice Subtitle*/
 .table {
     width:70%;
     border:1px solid darkgreen;
-    border-collapse: collapse; /* border-spacing: 0; */
+    border-collapse: collapse; /* border-spacing: 0; only 1 line*/
+    border-width: 2px;
+    box-shadow: 0 0  5px 5px skyblue;
+}
+
+.gloves-img {
+    size: 70%;
+    width: 70%;
+    border-color: darkgreen;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 25px; /* Circle is over 50% */
 }
 
 .practice {
