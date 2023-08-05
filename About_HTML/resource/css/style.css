@@ -29,6 +29,7 @@ h2 {
 dd {
     margin-left:2rem;
     text-shadow: 2px 3px 3px orange; /* offset-x offset-y blur-radius color */
+    display: inline; /* make block element as inline element*/
 }
 
 th, tr, td {
@@ -50,7 +51,7 @@ h4 { /* Practice Subtitle*/
 .container .practice-container {
     width:90%;
     box-sizing: border-box; /* To make width(95%) as contain padding, margin, border */
-    margin: auto; /* Center aligned */
+    margin: 0 auto; /* Center aligned */
 }
 
 .list { /* class */
@@ -74,19 +75,48 @@ h4 { /* Practice Subtitle*/
     width:70%;
     border:1px solid darkgreen;
     border-collapse: collapse; /* border-spacing: 0; only 1 line*/
-    border-width: 2px;
+    border: 2px;
     box-shadow: 0 0  5px 5px skyblue;
 }
 
 .gloves-img {
     size: 70%;
     width: 70%;
-    border-color: darkgreen;
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid darkgreen;
     border-radius: 25px; /* Circle is over 50% */
 }
 
+.site-title, .site-sidebar, .site-article, .site-footer{
+    border:0px solid black;
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 80%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.site-title {
+    height:70px;
+    background-color: lightgray;
+}
+
+.site-sidebar {
+    width: 20%;
+    height: 200px;
+    float: left; /* If i make this with display: inline-block;, It has gap between sidebar and ariticle*/
+    background-color: beige;
+}
+.site-article {
+    width: 80%;
+    height:200px;
+    float: left;
+    background-color:cornsilk;
+}
+
+.site-footer {
+    height: 70px;
+    background-color: grey;
+    clear: left; /* When you use float, it have to be needed*/
+}
 .practice {
     background-color: skyblue;
     color: greenyellow;
