@@ -102,20 +102,34 @@ h4 { /* Practice Subtitle*/
 .site-sidebar {
     width: 20%;
     height: 200px;
-    float: left; /* If i make this with display: inline-block;, It has gap between sidebar and ariticle*/
+    float: left; /* If i make this with display: inline-block;, It has gap between sidebar and ariticle */
     background-color: beige;
+    /* display: inline-block; Can with display and position, without float*/
 }
 .site-article {
     width: 80%;
     height:200px;
     float: left;
     background-color:cornsilk;
+    /* display: inline-block;
+    position:relative;
+    left:20%; width of sidebar
+    top:-200px; height of sidebar*/
+}
+
+.cat-bg {
+    width: 30%;
+    position:absolute;
+    left:45%;
+    opacity: 0.3;
 }
 
 .site-footer {
     height: 70px;
     background-color: grey;
-    clear: left; /* When you use float, it have to be needed*/
+    clear: left; /* When you use float, it have to be needed */
+    /* position: relative;
+    top:-205px; height of article + margin*/
 }
 .practice {
     background-color: skyblue;
