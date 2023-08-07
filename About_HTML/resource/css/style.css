@@ -111,26 +111,38 @@ h4 { /* Practice Subtitle*/
     height:200px;
     float: left;
     background-color:cornsilk;
+    background-image: url('../img/cat-bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+
+    /* background: url('../img/cat-bg.png') no-repeat center center fixed; image, repeat, position, attachment */
+
     /* display: inline-block;
     position:relative;
     left:20%; width of sidebar
     top:-200px; height of sidebar*/
 }
 
-.cat-bg {
-    width: 30%;
-    position:absolute;
-    left:45%;
-    opacity: 0.3;
-}
-
 .site-footer {
     height: 70px;
-    background-color: grey;
+    background: linear-gradient(to right top, grey, white);
     clear: left; /* When you use float, it have to be needed */
     /* position: relative;
     top:-205px; height of article + margin*/
 }
+
+.gradation {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    border-radius: 50%; /* Make a circle*/
+    background: radial-gradient(circle at 20% 20%, white, blue, black);
+    /* Radial gradation to circle*/
+}
+
 .practice {
     background-color: skyblue;
     color: greenyellow;
