@@ -1,0 +1,44 @@
+body {
+    margin: 5px;
+    text-transform: capitalize;
+}
+
+.container {
+    border: 1px solid black;
+    width:500px;
+    height:500px;
+    padding: 4rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: radial-gradient(circle at 20% 20%, white, orange);
+}
+
+.login-field {
+    width:400px;
+    line-height: 25px;
+    padding:1rem;
+}
+
+.login-field label {
+    float: left;
+    width:80px;
+}
+
+.login-field input {
+    width: 200px;
+}
+
+.container button {
+    width: 70px;
+    height: 30px;
+    float: right;
+}
+
+.replace-signup {
+    clear: right;
+    float:right;
+
+}
