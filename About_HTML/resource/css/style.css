@@ -48,6 +48,12 @@ h4 { /* Practice Subtitle*/
     font-family: 'HandJet', cursive;
 }
 
+a[target = "_blank"] { /* Attribute selectors */
+    background-image: url('../img/search.png');
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
 .login-btn {
     margin: 0;
     position:relative;
@@ -61,7 +67,7 @@ h4 { /* Practice Subtitle*/
     box-shadow: 0px 0px 3px 3px skyblue;
 }
 
-.container .practice-container {
+.container, .practice-container {
     width:90%;
     box-sizing: border-box; /* To make width(95%) as contain padding, margin, border */
     margin: 0 auto; /* Center aligned */

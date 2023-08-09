@@ -31,14 +31,26 @@ body {
     width: 200px;
 }
 
-.container button {
-    width: 70px;
+.container button { /* descendant selectors */
+    /* width: 70px;
     height: 30px;
-    float: right;
+    float: right; */
 }
 
-.replace-signup {
-    clear: right;
-    float:right;
+[id |= "btn"] { /* All element that contain btn in class */
+    width: 70px;
+    height: 30px;
+    float: right; 
+}
+/*
+~= -> be exactly the same
+|= -> be exactly the same or start "(word)-"
+^= -> start with (String)
+$= -> end with (String)
+*= -> contain (String)
+*/
 
+.replace-signup {
+    /* clear: right;
+    float:right; */
 }
