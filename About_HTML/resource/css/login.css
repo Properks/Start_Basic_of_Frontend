@@ -50,6 +50,15 @@ $= -> end with (String)
 *= -> contain (String)
 */
 
+button[id *= "btn"]:hover {
+    background-color: lightgrey;
+}
+
+button[id *= "btn"]:active {
+    background-color: bisque;
+    color: skyblue;
+}
+
 .replace-signup {
     /* clear: right;
     float:right; */
