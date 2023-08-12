@@ -185,6 +185,36 @@ input[id $= "video"] {
     /* Radial gradation to circle*/
 }
 
+.transform-element-first {
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    text-align: center;
+    line-height:200px;
+    display: inline-block;
+    position:absolute;
+    border: 1px solid black;
+    border-radius: 50%;
+    transform:translateX(50px) rotate(-45deg); /* translate and rotate*/
+}
+
+.transform-element-second {
+    width: 400px;
+    height: 193px;
+    display: inline-block;
+    border: 1px solid black;
+    perspective: 300px; /* Add perspective in order to add hover action */
+    transform:translateX(300px);
+}
+
+.transform-element-image {
+    width:400px;
+}
+
+.transform-element-image:hover {
+    transform: rotateX(50deg);
+}
+
 .practice {
     background-color: skyblue;
     color: greenyellow;
