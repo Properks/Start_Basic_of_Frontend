@@ -211,6 +211,48 @@ input[id $= "video"] {
     width:400px;
 }
 
+.transform-element-third {
+    margin:10px;
+    padding:0;
+    width:200px;
+    height:200px;
+    border: 1px solid black;
+    position:relative;
+    transform: translate(50px);
+    /* transition-property: border-radius, background-color;
+    transition-duration: 1s, 2s; */
+    transition: 2s;
+}
+
+.caption {
+    margin:0;
+    padding: 50px;
+    width:200px;
+    height:200px;
+    box-sizing: border-box;
+    position:absolute;
+    top:200px; /* Under 200px */
+    border-radius: 40%;
+    opacity: 0; /* hide */
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10; /* Always on top */
+}
+
+.caption h3, .caption p {
+    text-align: center;
+    color:white;
+}
+
+.transform-element-third:hover .caption{
+    opacity: 1; /* show */
+    transform:translateY(-200px); /* Up 200px */
+}
+
+.transform-element-third:hover {
+    background-color: beige;
+    border-radius: 40%;
+}
+
 .transform-element-image:hover {
     transform: rotateX(50deg);
 }
