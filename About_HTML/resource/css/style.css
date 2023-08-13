@@ -249,8 +249,11 @@ input[id $= "video"] {
 }
 
 .transform-element-third:hover {
-    background-color: beige;
-    border-radius: 40%;
+    /* animation-name: makeCircle; */
+    animation-name: around;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .transform-element-image:hover {
@@ -283,4 +286,17 @@ input[id $= "video"] {
         Declare font-size: 10px; here but, 0.75rem is 12px
         Can use 150%*/
     color:hsla(135, 51%, 51%, 0.5) /* + rgb, rgba*/
+}
+
+@keyframes makeCircle {
+    from { border-radius:0%;}
+    to {
+        border-radius: 40%;
+        background-color: beige;
+    }
+}
+
+@keyframes around {
+    from { transform:rotate(0deg);}
+    to { transform: rotate(360deg);}
 }
