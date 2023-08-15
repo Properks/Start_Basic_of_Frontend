@@ -18,6 +18,10 @@ Priority of css
     text-transform: capitalize;
 }
 
+body {
+    margin: 0 auto;
+}
+
 h2 {
     padding : 10px;
     background-color: beige;
@@ -54,11 +58,17 @@ a[target = "_blank"] { /* Attribute selectors */
     background-position: right;
 }
 
+input[type ~= "radio"] {
+    width:15%;
+    box-sizing: border-box;
+}
+
 input[type ~= "radio"]:checked + label{
     color: orange;
 }
 
 .login-btn {
+    width:50px;
     margin: 0;
     position:relative;
     left:90%;
@@ -110,22 +120,23 @@ input[type ~= "radio"]:checked + label{
 }
 
 div[class $= radio-container] {
-    width:25%;
-    height: 20%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
     border: 1px solid black;
-    border-radius: 40%;
     background-color: beige;
+}
+
+.video-body {
+    display: flex;
 }
 
 .radio-videos {
     width:30%;
-    display: inline-block;
-    position: relative;
-    top:-10px;
-}
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
 
-input[id $= "video"] {
-    margin-right: 0;
 }
 
 .site-title, .site-sidebar, .site-article, .site-footer{
@@ -185,30 +196,31 @@ input[id $= "video"] {
     /* Radial gradation to circle*/
 }
 
+.transform-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .transform-element-first {
     width: 200px;
     height: 200px;
     padding: 5px;
     text-align: center;
-    line-height:200px;
-    display: inline-block;
-    position:absolute;
+    line-height: 200px;
     border: 1px solid black;
     border-radius: 50%;
-    transform:translateX(50px) rotate(-45deg); /* translate and rotate*/
+    transform: rotate(-45deg); /* translate and rotate*/
 }
 
 .transform-element-second {
     width: 400px;
     height: 193px;
-    display: inline-block;
     border: 1px solid black;
     perspective: 300px; /* Add perspective in order to add hover action */
-    transform:translateX(300px);
 }
 
 .transform-element-image {
-    width:400px;
+    width: 400px;
 }
 
 .transform-element-third {
@@ -218,7 +230,6 @@ input[id $= "video"] {
     height:200px;
     border: 1px solid black;
     position:relative;
-    transform: translate(50px);
     /* transition-property: border-radius, background-color;
     transition-duration: 1s, 2s; */
     transition: 2s;
