@@ -63,9 +63,7 @@ input[type ~= "radio"] {
     box-sizing: border-box;
 }
 
-input[type ~= "radio"]:checked + label{
-    color: orange;
-}
+input[type ~= "radio"]:checked + label{color: orange;}
 
 .login-btn {
     width:50px;
@@ -87,17 +85,11 @@ input[type ~= "radio"]:checked + label{
     margin: 0 auto; /* Center aligned */
 }
 
-.list { /* class */
-    font-style: italic;
-}
+.list {font-style: italic;} /* class */
 
-.ordered-list {
-    list-style-type: lower-alpha; /* like 'type="a"' */
-}
+.ordered-list {list-style-type: lower-alpha;} /* like 'type="a"' */
 
-.unordered-list {
-    list-style-type: circle;
-}
+.unordered-list {list-style-type: circle;}
 
 .image-list {
     list-style-image: url('../img/download.png') !important;
@@ -127,16 +119,13 @@ div[class $= radio-container] {
     background-color: beige;
 }
 
-.video-body {
-    display: flex;
-}
+.video-body {display: flex;}
 
 .radio-videos {
-    width:30%;
+    width:100px;
     margin: 5px;
     display: flex;
     flex-direction: column;
-
 }
 
 .site-title, .site-sidebar, .site-article, .site-footer{
@@ -147,10 +136,7 @@ div[class $= radio-container] {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.site-title {
-    height:70px;
-    background-color: lightgray;
-}
+.site-title {height:70px; background-color: lightgray;}
 
 .site-sidebar {
     width: 20%;
@@ -196,10 +182,7 @@ div[class $= radio-container] {
     /* Radial gradation to circle*/
 }
 
-.transform-body {
-    display: flex;
-    flex-wrap: wrap;
-}
+.transform-body {display: flex; flex-wrap: wrap;}
 
 .transform-element-first {
     width: 200px;
@@ -219,9 +202,7 @@ div[class $= radio-container] {
     perspective: 300px; /* Add perspective in order to add hover action */
 }
 
-.transform-element-image {
-    width: 400px;
-}
+.transform-element-image {width: 400px;}
 
 .transform-element-third {
     margin:10px;
@@ -242,21 +223,18 @@ div[class $= radio-container] {
     height:200px;
     box-sizing: border-box;
     position:absolute;
-    top:200px; /* Under 200px */
+    left:200px; /* Under 200px */
     border-radius: 40%;
     opacity: 0; /* hide */
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 10; /* Always on top */
 }
 
-.caption h3, .caption p {
-    text-align: center;
-    color:white;
-}
+.caption h3, .caption p {text-align: center; color:white;}
 
 .transform-element-third:hover .caption{
     opacity: 1; /* show */
-    transform:translateY(-200px); /* Up 200px */
+    transform:translatex(-200px); /* Up 200px */
 }
 
 .transform-element-third:hover {
@@ -271,15 +249,58 @@ div[class $= radio-container] {
     transform: rotateX(50deg);
 }
 
+.grid-title {
+    border: 1px solid black;
+    margin:0;
+    padding:5px;
+    text-align: center;
+    grid-column: 1/4;
+    background: linear-gradient(to right, rgb(175, 175, 175), lightgrey);
+}
+
+.grid-layout-body {
+    background-color: bisque;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 1fr => 1fraction */
+    grid-template-rows: auto 100px 100px 100px;
+    gap: 5px;
+}
+
+.grid-layout-body [class ^= grid-element] {
+    margin:0;
+    padding:5px;
+    border: 1px solid black;
+    text-align: center;
+}
+.grid-element-1 {background-color: rgb(175, 175, 175)}
+.grid-element-2 {background-color: lightgrey;}
+
+.grid-application {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    grid-template-areas: 
+    "box1 box1 box1" /* "" is 1 line */
+    "box2 box3 box3"
+    "box2 . box4";
+
+}
+
+.grid-application [class ^= "box"] {
+    margin: 0;
+    padding: 5px;
+}
+.box1 {grid-area:box1; background-color: aqua;}
+.box2 {grid-area:box2; background-color: greenyellow;}
+.box3 {grid-area:box3; background-color: orange;}
+.box4 {grid-area:box4; background-color: yellow;}
+
 .practice {
     background-color: skyblue;
     color: greenyellow;
 }
 
-.practice-unordered-list {
-    list-style-type: none;
-    
-}
+.practice-unordered-list {list-style-type: none;}
 .practice-unordered-list-item {
     border: 1px solid #000;
     margin: 1em;
@@ -310,4 +331,10 @@ div[class $= radio-container] {
 @keyframes around {
     from { transform:rotate(0deg);}
     to { transform: rotate(360deg);}
+}
+
+@media screen and (min-width: 1024px) { /* change width as 150px on screen has over 1024px width */
+    .radio-videos {
+        width:150px;
+    }
 }
