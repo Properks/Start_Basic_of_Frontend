@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resource/css/style.css">
+    <title>JS Document</title>
+</head>
+<body>
+    <div class="container">
+        <div id="change-color">
+            <h2 id="change-color-title">title</h2>
+            <p>Click title</p>
+        </div>
+    </div>
+
+    <script>
+        var heading = document.querySelector('#change-color-title')
+        heading.onclick = function() {
+            heading.style.color = "red";
+            alert('Title color is changed');
+        }
+    </script>
+</body>
+</html>
