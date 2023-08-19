@@ -17,14 +17,40 @@ calculateAge.onclick = function() {
 // Check divisible with conditional
 var checkDivisible = document.querySelector('#check-divisible');
 checkDivisible.onclick = function() {
-    var base = document.getElementById('base-number').value;
-    var divide = document.getElementById("divide-number").value;
+    var base = parseInt(document.getElementById('base-number').value);
+    var divide = parseInt(document.getElementById("divide-number").value);
     
 
-    if (base == "" || divide == "" || divide == 0) {
-        alert('Input doesn\'t exist or denominator is 0');
+    if (isNaN(base) || isNaN(divide)) {
+        alert('Input doesn\'t exist or isn\'t number');
+    }
+    else if (divide == 0) {
+        alert('Denominator is 0')
     }
     else {
         alert(base + ' / ' + divide + ' = ' + Math.floor(base/divide) + '...' + base%divide);
     }
+}
+
+// Multiplication tables with loop
+let Multiplication = document.getElementById('multiplication-tables');
+Multiplication.onclick = function() {
+    document.write('<h2>Multiplication Tables</h2>');
+
+    for(i = 1; i < 10; i++) {
+        document.write("<div>");
+        document.write('<h3>Multiplication table ' + i + '</h3>');
+        
+        for(j = 1; j < 10; j++) {
+            document.write('<p>' + i +' x ' + j + ' = ' + i*j);
+        }
+        document.write("</div>");
+    }
+}
+
+let seat = document.querySelector('#seat-table');
+seat.onclick = function() {
+    document.write('<h3>Seat Table</h3>');
+
+    
 }
