@@ -7,11 +7,11 @@ heading.onclick = function() {
 
 // Calculate age with variable
 var calculateAge = document.querySelector('#calculate-age');
+let age = (now, birth) => {return now - birth + 1}
 calculateAge.onclick = function() {
-    var now = 2023;
-    var birthYear = prompt("When are you born?");
-    age = now - birthYear + 1;
-    alert('You are ' + age);
+    let nowYear = 2023;
+    let birthYear = prompt("When are you born?");
+    alert('You are ' + age(nowYear,birthYear));
 }
 
 // Check divisible with conditional
@@ -21,15 +21,21 @@ checkDivisible.onclick = function() {
     var divide = parseInt(document.getElementById("divide-number").value);
     
 
+    if (checkNumber(base, divide)) {
+        alert(base + ' / ' + divide + ' = ' + Math.floor(base/divide) + '...' + base%divide);
+    }
+}
+
+function checkNumber(base, divide) {
     if (isNaN(base) || isNaN(divide)) {
         alert('Input doesn\'t exist or isn\'t number');
+        return false;
     }
     else if (divide == 0) {
         alert('Denominator is 0')
+        return false
     }
-    else {
-        alert(base + ' / ' + divide + ' = ' + Math.floor(base/divide) + '...' + base%divide);
-    }
+    return true;
 }
 
 // Multiplication tables with loop
@@ -48,6 +54,7 @@ Multiplication.onclick = function() {
     }
 }
 
+//Seat table
 let seat = document.querySelector('#seat-table');
 seat.onclick = function() {
     let seat = 1;
