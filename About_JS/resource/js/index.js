@@ -50,7 +50,22 @@ Multiplication.onclick = function() {
 
 let seat = document.querySelector('#seat-table');
 seat.onclick = function() {
-    document.write('<h3>Seat Table</h3>');
+    let seat = 1;
+    let row = parseInt(document.getElementById('seat-table-row').value);
+    let column = parseInt(document.getElementById('seat-table-column').value);
 
+    document.write('<style>table, td {border: 1px solid black; border-collapse: collapse;} td {text-align: center;}</style>');
+    document.write('<h3>Seat Table</h3>');
+    document.write('<table>');
+    for(i = 0; i < row; i++) {
+        document.write('<tr>');
+        for(j = 0; j < column; j++) {
+            document.write('<td>' + seat++ + '</td>');
+            console.log(row + column);
+        }
+        document.write('</tr>');
+    }
+
+    document.write('</table>');
     
 }
