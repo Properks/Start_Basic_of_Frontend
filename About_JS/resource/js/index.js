@@ -76,3 +76,14 @@ seat.onclick = function() {
     document.write('</table>');
     
 }
+
+// Event 
+function showDetail() {
+    document.getElementById('open-description').style.display = "none";
+    document.getElementById('event-detail-description').style.display = "block";
+}
+
+function hideDetail() {
+    document.getElementById('event-detail-description').style.display = "none";
+    document.getElementById('open-description').style.display = "block";
+}
