@@ -78,12 +78,12 @@ seat.onclick = function() {
 }
 
 // Event 
-function showDetail() {
+document.querySelector('#open-description').onclick = () => {
     document.getElementById('open-description').style.display = "none";
     document.getElementById('event-detail-description').style.display = "block";
 }
 
-function hideDetail() {
+document.querySelector('#event-detail-description').onclick = () => {
     document.getElementById('event-detail-description').style.display = "none";
     document.getElementById('open-description').style.display = "block";
 }
