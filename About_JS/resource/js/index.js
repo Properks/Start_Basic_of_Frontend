@@ -87,3 +87,32 @@ document.querySelector('#event-detail-description').onclick = () => {
     document.getElementById('event-detail-description').style.display = "none";
     document.getElementById('open-description').style.display = "block";
 }
+
+// Object (Date)
+{
+let startTime;
+let stopTime;
+document.querySelector('#start-stop-watch').onclick = () => {
+    if (document.getElementById('start-time').value == "" ||
+    stopTime > startTime) {
+
+        startTime = new Date();
+        document.getElementById('start-time').value = startTime;
+    }
+    else {
+        alert('Already started');
+    }
+}
+
+document.querySelector('#stop-stop-watch').onclick = () => {
+    if (startTime == null || stopTime > startTime) {
+        alert('Need to press start');
+    }
+    else {
+        stopTime = new Date();
+        let timeDiff = stopTime - startTime;
+        document.getElementById('stop-time').value = stopTime;
+        alert(timeDiff / 1000 + 'sec');
+    }
+}
+}
