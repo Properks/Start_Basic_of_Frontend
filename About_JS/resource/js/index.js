@@ -116,3 +116,27 @@ document.querySelector('#stop-stop-watch').onclick = () => {
     }
 }
 }
+
+//Make Random Number
+document.querySelector('#generate-random-number').onclick = () => {
+    let minNumber = parseInt(document.getElementById('min-number').value);
+    let maxNumber = parseInt(document.getElementById('max-number').value);
+    if (isNaN(minNumber) || isNaN(maxNumber) || (minNumber + 1) >= maxNumber) {
+        alert('Input isn\'t right');
+    }
+    else {
+        let numberDiff = maxNumber - minNumber - 1;
+        document.getElementById('random-number').value = 
+        Math.floor(Math.random() * maxNumber % numberDiff + minNumber + 1);
+        // make numbers in range and plus minNumber, +1 is inorder not to contain min number.
+    }
+}
+
+//Notice
+function popUp() {
+    let newWin = window.open('notice.html', 'notice', 'width=300, height=300');
+    if (newWin == null) { // When pop-ups are blocked
+        alert('Pop-ups are blocked');
+    }
+    newWin.moveBy(200, 200);
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice</title>
+    <style>
+        * {text-transform: capitalize;}
+        body {display: flex; justify-content: center;}
+        button {float:right;}
+        .notice-container {width: 200px; padding:5px; border: 1px solid skyblue;}
+    </style>
+</head>
+<body>
+    <div class="notice-container">
+        <div class="notice-title">notice</div>
+        <div class="notice-body">
+            <dl>
+                <dt>list</dt>
+                <dd>notice 1</dd>
+                <dd>notice 2</dd>
+                <dd>notice 3</dd>
+                <dd>notice 4</dd>
+            </dl>
+        </div>
+        <button onclick="closeWindow()">close</button>
+    </div>
+    
+    <script>
+        function closeWindow() {window.close();}
+    </script>
+</body>
+</html>
