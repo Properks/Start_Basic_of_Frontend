@@ -138,5 +138,7 @@ function popUp() {
     if (newWin == null) { // When pop-ups are blocked
         alert('Pop-ups are blocked');
     }
-    newWin.moveBy(200, 200);
+    let positionX = screen.availWidth / 2 - 150; // screen object
+    let positionY = screen.availHeight/2 - 150;
+    newWin.moveBy(positionX, positionY);
 }
