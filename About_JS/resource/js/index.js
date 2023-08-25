@@ -89,10 +89,16 @@ document.querySelector('#event-detail-description').onclick = () => {
 }
 
 let eventImage = document.querySelector('.event-img');
-eventImage.onclick = function(event) {
-    alert('Image : ' + eventImage.getAttribute('alt') + 
-    '(' + this.src +  ')')
-} // getAttribute and this with function, event
+let lightbox = document.querySelector('#lightbox');
+eventImage.addEventListener('click', (event) => {
+    let srcLink = eventImage.getAttribute('src');
+    lightbox.style.display = 'block';
+    document.querySelector('#lightbox-image').setAttribute('src', srcLink);
+})
+
+lightbox.onclick = (event) => {
+    lightbox.style.display = 'none';
+}
 
 // Object (Date)
 {
