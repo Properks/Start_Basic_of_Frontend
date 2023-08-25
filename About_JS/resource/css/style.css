@@ -13,6 +13,6 @@ button {text-transform: uppercase;}
 .over {margin:0px; position:absolute; left:5px; bottom:10px; background-color: rgba(255, 255, 255, 0.6); border: 1px solid #ccc; text-transform: capitalize;}
 .reload-container {margin: 0;display: flex; justify-content: right;}
 .reload-btn {width:30px; height:30px; display: flex; justify-content: center; align-items: center;}
-.reload-btn:hover {border: 1px solid #ccc;}
+/* .reload-btn:hover {border: 1px solid #ccc;} */
 #event-detail-description {display: none;}
 #min-number, #max-number {width:70px;}

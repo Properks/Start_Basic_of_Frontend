@@ -88,6 +88,12 @@ document.querySelector('#event-detail-description').onclick = () => {
     document.getElementById('open-description').style.display = "block";
 }
 
+let eventImage = document.querySelector('.event-img');
+eventImage.onclick = function(event) {
+    alert('Image : ' + eventImage.getAttribute('alt') + 
+    '(' + this.src +  ')')
+} // getAttribute and this with function, event
+
 // Object (Date)
 {
 let startTime;
@@ -126,8 +132,8 @@ document.querySelector('#generate-random-number').onclick = () => {
     }
     else {
         let numberDiff = maxNumber - minNumber - 1;
-        document.getElementById('random-number').value = 
-        Math.floor(Math.random() * maxNumber % numberDiff + minNumber + 1);
+        document.getElementById('random-number').innerText = 
+        Math.floor(Math.random() * maxNumber % numberDiff + minNumber + 1); // use innerText
         // make numbers in range and plus minNumber, +1 is inorder not to contain min number.
     }
 }
@@ -142,3 +148,17 @@ function popUp() {
     let positionY = screen.availHeight/2 - 150;
     newWin.moveBy(positionX, positionY);
 }
+
+//Reload button
+let reloadBtn = document.querySelector('.reload-btn');
+reloadBtn.addEventListener("mouseover", (event) => {
+    reloadBtn.style.border = '1px solid #ccc';
+})
+
+reloadBtn.addEventListener('mouseout', (event) => {
+    reloadBtn.style.border = ''; // change to default
+})
+
+reloadBtn.addEventListener('mousedown', (event) => {
+    reloadBtn.style.backgroundColor = 'aquamarine';
+})
