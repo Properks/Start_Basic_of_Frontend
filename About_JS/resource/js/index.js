@@ -191,3 +191,30 @@ function remove() {
     document.getElementById('see-more').style.display = 'block';
     document.getElementById('simple-view').style.display = 'none';
 }
+
+//To Do List
+function addList() {
+    let contents = document.getElementById('to-do-list-input');
+    if (contents.value == "") {
+        alert('None input');
+    }
+    else {
+        let list = document.getElementById('to-do-list');
+        let newLi = document.createElement('li');
+        let newText = document.createTextNode(contents.value);
+        newLi.appendChild(newText);
+        if (list.childNodes.length > 0) {
+            list.insertBefore(newLi, list.childNodes[0]);
+        }
+        else {list.appendChild(newLi);}
+        
+        contents.value = "";
+
+        let itemList = list.childNodes;
+        for (let i = 0; i < itemList.length; i++) {
+            itemList[i].addEventListener('click', function() {
+                list.removeChild(this);
+            })
+        }
+    }
+}
